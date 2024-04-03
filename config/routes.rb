@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get '/inscription', to: 'inscriptions#new'
   post '/inscription', to: 'inscriptions#create'
 
-  get '/login', to: 'sessions#new'
+  # get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
+  # config/routes.rb
+  get '/dashboard', to: 'dashboard#index'
+
   delete '/logout', to: 'sessions#destroy'
-  get 'dashboard', to: 'dashboard#index', as: 'dashboard'
 end
