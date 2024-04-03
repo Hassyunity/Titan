@@ -14,8 +14,8 @@
         </div>
         <div class="right">
             <%= link_to image_tag('logo.jpg', class: 'logo'), root_path %>
-            <h1>Login</h1>
-            <%= form_with(url: root_path, method: "post") do |form| %>
+              <h1>Login</h1>
+              <%= form_with(url: login_path, method: "post") do |form| %>
                 <% if flash[:alert] %>
                   <div class="alert alert-danger" role="alert">
                     <%= flash[:alert] %>
@@ -32,8 +32,9 @@
                   <%= form.password_field :password, class: "form-control", placeholder: "Mot de passe", required: true %>
                 </div>
 
-                <%= form.submit "Login", class: "btn btn-primary" %>
-            <% end %>
+                <%= form.submit "Login", class: "btn btn-primary"%>
+              <% end %>
+
             <p>Vous n'avez pas de compte ? <%= link_to "S'inscrire", inscription_path %></p>
         </div>
     </div>
