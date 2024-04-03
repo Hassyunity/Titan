@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   get 'inscriptions/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,4 +13,10 @@ Rails.application.routes.draw do
   get '/inscription', to: 'inscriptions#new'
   post '/inscription', to: 'inscriptions#create'
 
+  # get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  # config/routes.rb
+  get '/dashboard', to: 'dashboard#index'
+
+  delete '/logout', to: 'sessions#destroy'
 end
