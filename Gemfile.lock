@@ -69,6 +69,11 @@ GEM
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     bcrypt (3.1.20)
+    bg (0.0.5)
+      activejob (>= 5.0)
+      activerecord (>= 5.0)
+      concurrent-ruby (>= 1.0)
+      globalid (>= 0.3)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -212,7 +217,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bcrypt
+  bcrypt (~> 3.1.7)
+  bg
   bootsnap
   capybara
   debug

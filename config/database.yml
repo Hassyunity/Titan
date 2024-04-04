@@ -14,12 +14,12 @@ default: &default
 
 development:
   <<: *default
-  database: base
+  database: titan_development
 
 test:
   <<: *default
-  database: test
+  database: titan_test
 
 production:
   <<: *default
-  database: production
+  database: titan_production
