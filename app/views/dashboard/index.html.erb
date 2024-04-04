@@ -1,2 +1,77 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord</title>
+<style>
+  /* Styles pour la barre latérale */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .sidebar ul li a:hover {
+    color: #ccc;
+  }
+
+  /* Styles pour le contenu principal */
+  .main-content {
+    margin-left: 220px; /* Marge pour éviter la superposition avec la barre latérale */
+    padding: 20px;
+  }
+
+  /* Styles pour le bouton */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<!-- Barre latérale -->
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="/profile">Profil</a></li>
+  </ul>
+</div>
+
+<!-- Contenu principal -->
+<div class="main-content">
+  <h1>Bienvenue sur votre tableau de bord</h1>
+  <p>Ceci est votre espace personnel où vous pouvez gérer votre compte et accéder aux fonctionnalités de l'application.</p>
+  <p>N'hésitez pas à explorer les différentes fonctionnalités disponibles et à nous contacter si vous avez des questions.</p>
+</div>
+
+</body>
+</html>

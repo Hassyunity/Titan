@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/admin/users', to: 'admin#users'
 
+  get '/profile', to: 'users#show'
  # config/routes.rb
   resources :users do
     member do
@@ -29,4 +30,7 @@ Rails.application.routes.draw do
       put :deactivate
     end  
   end
+  # config/routes.rb
+  resources :users, only: [:show]
+
 end
