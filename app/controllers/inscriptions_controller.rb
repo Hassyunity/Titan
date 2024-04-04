@@ -18,4 +18,5 @@ class InscriptionsController < ApplicationController
   def user_params
     params.require(:user).permit(:nom, :email, :password, :password_confirmation)
   end
+
 end

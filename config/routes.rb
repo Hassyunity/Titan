@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'admin/users'
   get 'dashboard/index'
   get 'sessions/new'
   get 'sessions/create'
@@ -19,4 +20,13 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index'
 
   delete '/logout', to: 'sessions#destroy'
+  get '/admin/users', to: 'admin#users'
+
+ # config/routes.rb
+  resources :users do
+    member do
+      put :activate
+      put :deactivate
+    end  
+  end
 end
