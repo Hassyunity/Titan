@@ -11,7 +11,7 @@ body {
 
 .left {
   flex: 1;
-  background-color: #181414;
+  background-color:#013461;
   padding: 20px;
   color: #44d121;
 }
@@ -38,7 +38,7 @@ input {
   border: 1px solid #ccc;
 }
 
-button {
+.login {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -47,7 +47,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.login:hover {
   background-color: #0056b3;
 }
 
@@ -63,4 +63,8 @@ button:hover {
   width: 80%; /* Largeur de l'image */
   height: auto; /* Hauteur automatique pour maintenir le ratio */
   margin-bottom: 20px; /* Marge en bas pour l'espace */
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
