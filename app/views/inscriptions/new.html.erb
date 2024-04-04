@@ -1,24 +1,39 @@
-<h1>Inscription</h1>
-<%= form_with(model: @user, url: inscription_path, method: "post") do |form| %>
-  <div class="form-group">
-    <%= form.label :nom %>
-    <%= form.text_field :nom, class: "form-control", placeholder: "Nom", required: true %>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <link rel="stylesheet" href="insciption.css">
+</head>
+<body>
+  <div class="outer-containers">
+    <div class="containers">
+      <h1>Inscription</h1>
+      <%= form_with(model: @user, url: inscription_path, method: "post") do |form| %>
+        <div class="form-groups">
+          <%= form.label :nom %>
+          <%= form.text_field :nom, class: "form-controls", placeholder: "Nom", required: true %>
+        </div>
 
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.email_field :email, class: "form-control", placeholder: "Email", required: true %>
-  </div>
+        <div class="form-groups">
+          <%= form.label :email %>
+          <%= form.email_field :email, class: "form-controls", placeholder: "Email", required: true %>
+        </div>
 
-  <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control", placeholder: "Mot de passe", required: true %>
-  </div>
+        <div class="form-groups">
+          <%= form.label :password %>
+          <%= form.password_field :password, class: "form-controls", placeholder: "Mot de passe", required: true %>
+        </div>
 
-  <div class="form-group">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Confirmer le mot de passe", required: true %>
-  </div>
+        <div class="form-groups">
+          <%= form.label :password_confirmation %>
+          <%= form.password_field :password_confirmation, class: "form-controls", placeholder: "Confirmer le mot de passe", required: true %>
+        </div>
 
-  <%= form.submit "S'inscrire", class: "btn btn-primary" %>
-<% end %>
+        <%= form.submit "S'inscrire", class: "inscrire" %>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>

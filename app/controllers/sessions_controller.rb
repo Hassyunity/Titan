@@ -6,8 +6,12 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to dashboard_path # Redirige vers le tableau de bord après connexion réussie
+      if user.email == 'admin@titan.ai' && params[:password] == 'admin'
+        redirect_to admin_users_path # Redirige vers la page d'administration si les identifiants sont ceux de l'administrateur
+      else
+        session[:user_id] = user.id
+        redirect_to dashboard_path # Redirige vers le tableau de bord après connexion réussie
+      end
     else
       flash[:alert] = 'Adresse email ou mot de passe invalide'
       redirect_to login_path # Redirige vers la page de connexion en cas d'échec de connexion

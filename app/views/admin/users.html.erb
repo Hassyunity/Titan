@@ -1,0 +1,85 @@
+<!-- app/views/admin/users.html.erb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des utilisateurs</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Inclure votre fichier CSS pour les styles personnalisés -->
+  <%# <%= link_to 'Désactiver', deactivate_user_path(user), method: :put %>
+
+  <style>
+    /* Styles CSS spécifiques pour cette page */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .action-buttons a {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .action-buttons a:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Liste des utilisateurs</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.nom %></td>
+          <td><%= user.email %></td>
+          <td class="action-buttons">
+            <% if user.active? %>
+              <%= link_to 'Désactiver', deactivate_user_path(user), method: :put, class: 'btn btn-danger' %>
+            <% else %>
+              <%= link_to 'Activer', activate_user_path(user), method: :put, class: 'btn btn-success' %>
+            <% end %>
+          </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
+</html>
