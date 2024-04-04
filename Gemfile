@@ -10,7 +10,6 @@ gem "rails", "~> 7.0.7"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-
 # gem 'bg'
 gem 'bcrypt', '~> 3.1.7'
 
