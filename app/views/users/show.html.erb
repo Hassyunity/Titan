@@ -1,5 +1,31 @@
 <!-- app/views/users/show.html.erb -->
-<h1>Profil de l'utilisateur</h1>
-<p>Nom : <%= @user.nom %></p>
-<p>Email : <%= @user.email %></p>
-<!-- Ajoutez d'autres informations de profil si nécessaire -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil de l'utilisateur</title>
+<%= stylesheet_link_tag 'menu' %> <!-- Inclure le fichier CSS externe -->
+
+</head>
+<body>
+
+<!-- Barre latérale -->
+<div class="sidebar">
+  <ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/profile">Profil</a></li>
+    <li><a href="/logout" class="logout">Logout</a></li>
+  </ul>
+</div>
+
+<!-- Contenu principal -->
+<div class="main-content">
+  <h1>Profil de l'utilisateur</h1>
+  <p>Nom : <%= @user.nom %></p>
+  <p>Email : <%= @user.email %></p>
+  <!-- Ajoutez d'autres informations de profil si nécessaire -->
+</div>
+
+</body>
+</html>

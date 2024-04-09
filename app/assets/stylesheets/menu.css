@@ -1,0 +1,70 @@
+/* menu.css */
+
+/* Styles pour la barre latérale */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color:#013461;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #ccc;
+}
+
+/* Styles pour le contenu principal */
+.main-content {
+  margin-left: 220px; /* Marge pour éviter la superposition avec la barre latérale */
+  padding: 20px;
+}
+
+/* Styles pour le bouton */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.logout {
+  display: block;
+  margin-top: auto; /* Positionner en bas de la barre latérale */
+  padding: 10px 20px;
+  background-color: transparent; /* Fond transparent */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #007bff; /* Bordure bleue */
+  position: absolute;
+  bottom: 50px; /* Position par rapport au bas */
+  left: 50%; /* Centrer horizontalement */
+  transform: translateX(-50%); /* Centrer horizontalement */
+}
+
+.logout:hover {
+  background-color: #007bff; /* Couleur bleue au survol */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
