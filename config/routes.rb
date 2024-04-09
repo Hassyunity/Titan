@@ -14,15 +14,16 @@ Rails.application.routes.draw do
   get '/inscription', to: 'inscriptions#new'
   post '/inscription', to: 'inscriptions#create'
 
-  # get '/login', to: 'sessions#new'
+  #get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   # config/routes.rb
   get '/dashboard', to: 'dashboard#index'
 
-  delete '/logout', to: 'sessions#destroy'
+  # delete '/logout', to: 'sessions#destroy'
   get '/admin/users', to: 'admin#users'
 
   get '/profile', to: 'users#show'
+  get '/logout', to: 'sessions#destroy'
  # config/routes.rb
   resources :users do
     member do
