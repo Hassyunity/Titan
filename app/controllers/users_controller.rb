@@ -12,4 +12,8 @@ class UsersController < ApplicationController
     user.update(active: false)
     redirect_to admin_users_path, notice: 'Utilisateur désactivé avec succès.'
   end
+
+  def show
+    @user = current_user # Assurez-vous que vous avez une méthode current_user qui récupère l'utilisateur actuellement connecté
+  end
 end
