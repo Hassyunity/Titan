@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord</title>
-    <%= stylesheet_link_tag 'menu' %>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color:#013461;
+      padding-top: 20px;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .table th {
+      background-color: #333;
+      color: #fff;
+    }
+    .table-striped tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
 
-  <!-- Barre latérale -->
-  <div class="sidebar">
-    <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="/profile">Profil</a></li>
-      <li><a href="/logout" class="logout">Logout</a></li> <!-- Nouveau lien Logout -->
-    </ul>
+<!-- Barre latérale -->
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="/profile">Profil</a></li>
+    <li><a href="/logout" class="logout">Logout</a></li> <!-- Nouveau lien Logout -->
+  </ul>
+</div>
+
+<!-- Contenu principal -->
+<div class="main-content">
+  <h1>Bienvenue sur votre tableau de bord</h1>
+  <p>Ceci est votre espace personnel où vous pouvez gérer votre compte et accéder aux fonctionnalités de l'application.</p>
+  <p>N'hésitez pas à explorer les différentes fonctionnalités disponibles et à nous contacter si vous avez des questions.</p>
+
+  <!-- Ajoutez ici votre contenu spécifique au tableau de bord -->
+  <div class="dashboard-content">
+    <h2>Statistiques</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Utilisateurs</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>Pages</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>Sessions</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>
 
-  <!-- Contenu principal -->
-  <div class="main-content">
-    <h1>Bienvenue sur votre tableau de bord</h1>
-    <p>Ceci est votre espace personnel où vous pouvez gérer votre compte et accéder aux fonctionnalités de l'application.</p>
-    <p>N'hésitez pas à explorer les différentes fonctionnalités disponibles et à nous contacter si vous avez des questions.</p>
-  </div>
-
-  </body>
+</body>
 </html>
