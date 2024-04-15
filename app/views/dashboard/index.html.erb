@@ -1,2 +1,28 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <%= stylesheet_link_tag 'menu' %>
+  </head>
+  <body>
+
+  <!-- Barre latérale -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="/profile">Profil</a></li>
+      <li><a href="/logout" class="logout">Logout</a></li> <!-- Nouveau lien Logout -->
+    </ul>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <h1>Bienvenue sur votre tableau de bord</h1>
+    <p>Ceci est votre espace personnel où vous pouvez gérer votre compte et accéder aux fonctionnalités de l'application.</p>
+    <p>N'hésitez pas à explorer les différentes fonctionnalités disponibles et à nous contacter si vous avez des questions.</p>
+  </div>
+
+  </body>
+</html>

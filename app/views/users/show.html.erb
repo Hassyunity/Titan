@@ -1,0 +1,35 @@
+<!-- app/views/users/show.html.erb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil de l'utilisateur</title>
+<%= stylesheet_link_tag 'menu' %> <!-- Inclure le fichier CSS externe -->
+
+</head>
+<body>
+
+<!-- Barre latérale -->
+<div class="sidebar">
+  <ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/profile">Profil</a></li>
+    <li><a href="/logout" class="logout">Logout</a></li>
+  </ul>
+</div>
+
+<!-- Contenu principal -->
+<div class="main-content">
+  <h1>Profil de l'utilisateur</h1>
+  <p>Nom : <%= @user.nom %></p>
+  <p>Email : <%= @user.email %></p>
+  <p>Date de creation : <%= @user.created_at %></p>
+  <!-- Ajoutez d'autres informations de profil si nécessaire -->
+  
+  <!-- Bouton Edit -->
+  <%= link_to 'Modifier votre profil', edit_user_path(@user) %>
+</div>
+
+</body>
+</html>
