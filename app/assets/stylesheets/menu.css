@@ -40,7 +40,7 @@
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #013461;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -68,3 +68,30 @@
 .btn:hover {
   background-color: #0056b3;
 }
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+/* Positionnement du bouton de modification */
+.edit {
+  position: absolute;
+  top: 10px; /* Ajustez selon votre mise en page */
+  right: 10px; /* Ajustez selon votre mise en page */
+}
+
+/* Style de la table de profil */
+.profile-table {
+  width: 100%;
+  max-width: 100%; /* Ajustez selon votre mise en page */
+  margin: 20px auto; /* Centre la table horizontalement avec une marge de 20px */
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 10px;
+  border: 2px solid #ddd; /* Bordures de la table */
+}
+
+.profile-table strong {
+  font-weight: bold;
+}
+

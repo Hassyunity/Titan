@@ -22,14 +22,30 @@
 <!-- Contenu principal -->
 <div class="main-content">
   <h1>Profil de l'utilisateur</h1>
-  <p>Nom : <%= @user.nom %></p>
-  <p>Email : <%= @user.email %></p>
-  <p>Date de creation : <%= @user.created_at %></p>
-  <!-- Ajoutez d'autres informations de profil si nécessaire -->
-  
+  <%= link_to 'Modifier votre profil', edit_user_path(@user), class: 'edit btn ' %>
+  <table class="table table-bordered profile-table">
+    <tbody>
+      <tr>
+        <td><strong>Nom :</strong></td>
+        <td><%= @user.nom %></td>
+      </tr>
+      <tr>
+        <td><strong>Email :</strong></td>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td><strong>Date de création :</strong></td>
+        <td><%= @user.created_at %></td>
+      </tr>
+      <!-- Ajoutez d'autres informations de profil si nécessaire -->
+    </tbody>
+  </table>
+
   <!-- Bouton Edit -->
-  <%= link_to 'Modifier votre profil', edit_user_path(@user) %>
+  
 </div>
+
+
 
 </body>
 </html>
