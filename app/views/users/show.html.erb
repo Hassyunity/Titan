@@ -24,7 +24,11 @@
   <h1>Profil de l'utilisateur</h1>
   <p>Nom : <%= @user.nom %></p>
   <p>Email : <%= @user.email %></p>
+  <p>Date de creation : <%= @user.created_at %></p>
   <!-- Ajoutez d'autres informations de profil si nécessaire -->
+  
+  <!-- Bouton Edit -->
+  <%= link_to 'Modifier votre profil', edit_user_path(@user) %>
 </div>
 
 </body>
